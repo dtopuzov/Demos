@@ -1,1 +1,0 @@
-**tests.demo_03_appium_helloworld_nativeapp**

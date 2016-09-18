@@ -1,4 +1,4 @@
-package tests.demo_00_junit;
+package tests.demo_01_junit;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

@@ -1,4 +1,4 @@
-package tests.demo_01_testng_hello_world;
+package tests.demo_02_testng_hello_world;
 
 import org.testng.annotations.Test;
 

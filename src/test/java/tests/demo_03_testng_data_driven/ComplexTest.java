@@ -1,4 +1,4 @@
-package tests.demo_02_testng_data_driven;
+package tests.demo_03_testng_data_driven;
 
 import org.testng.annotations.Test;
 
