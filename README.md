@@ -6,6 +6,7 @@ Demos with Junit, TestNG, Maven, Appium
 
 [TestNG Data Driven Tests](tests.demo_03_testng_data_driven.md)
 
+[REST Assured](tests.demo_04_restassured.md)
 
 External resources:
 

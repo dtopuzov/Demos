@@ -3,6 +3,7 @@ package tests.demo_01_junit;
 import org.junit.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class JunitTest1 {
 
@@ -33,8 +34,13 @@ public class JunitTest1 {
     @Test
     public void testCase11() {
         System.out.println("in test testCase11");
-        String str = "Junit is working fine";
-        assertEquals("Junit is working fine", str);
+
+        int number1 = 1;
+        int number2 = 2;
+
+        // Will pass if number1 < number2
+        // If number1 >= number2 will fail with specified message
+        assertTrue("number2 is not greater than number1", number1 < number2);
     }
 
     @Test

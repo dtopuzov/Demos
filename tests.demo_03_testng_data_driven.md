@@ -1,10 +1,10 @@
-**tests.demo_02_testng_data_driven**
+**tests.demo_03_testng_data_driven**
 
 Simple data drivn test:
-tests.demo_02_testng_data_driven.SimpleTest
+tests.demo_03_testng_data_driven.SimpleTest
 
 Data driven from CSV file:
-tests.demo_02_testng_data_driven.ComplexTest
+tests.demo_03_testng_data_driven.ComplexTest
 
 Notes: 
 

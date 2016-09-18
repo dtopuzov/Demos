@@ -1,4 +1,4 @@
-**tests.demo_01_testng_hello_world**
+**tests.demo_02_testng_hello_world**
 
 Show basics of TestNG hooks.
 
@@ -21,11 +21,11 @@ Test methods are annotated with @Test:
 ```
 
 See assert demos in
-- tests.demo_01_testng_hello_world.AssertTests
+- tests.demo_02_testng_hello_world.AssertTests
 
 See hook demos in
-- tests.demo_01_testng_hello_world.BaseTest
+- tests.demo_02_testng_hello_world.BaseTest
 
 See test properties demos in
-- tests.demo_01_testng_hello_world.SmokeTests1
-- tests.demo_01_testng_hello_world.SmokeTests2
+- tests.demo_02_testng_hello_world.SmokeTests1
+- tests.demo_02_testng_hello_world.SmokeTests2
