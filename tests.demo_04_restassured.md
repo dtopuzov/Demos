@@ -19,6 +19,8 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 ```
 
+[User Guide](https://github.com/rest-assured/rest-assured/wiki/Usage)
+
 2. Demos
 
 2.1 Hello World Demo (ITeBooks)
@@ -27,3 +29,10 @@ import static org.hamcrest.Matchers.*;
     API: http://it-ebooks-api.info/
     
     Tests: tests.demo_04_restassured.ITeBooks
+
+2.1 GitHub API Demos
+
+    Web: https://github.com
+    API: https://api.github.com
+
+    Tests: tests.demo_04_restassured.GitHubAPI
