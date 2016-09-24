@@ -2,12 +2,15 @@ package tests.demo_04_restassured;
 
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import tests.demo_04_restassured.GitHubObjects.Issue;
 
 import static io.restassured.RestAssured.basic;
 import static io.restassured.RestAssured.given;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GitHubAPI {
 
     // Please set environment variables
@@ -30,13 +33,16 @@ public class GitHubAPI {
 
         // This will set base URL for all the tests
         RestAssured.baseURI = String.format("%s/repos/%s/issues", baseURL, testRepo);
+
+        // We want all the details for failed tests
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
     }
 
     @Test
     public void CreateIssueWithBasicAuthentication() {
         Issue issue = new Issue();
-        issue.title = "Title";
-        issue.body = "Thsi is body.";
+        issue.title = "Title1";
+        issue.body = "This is body.";
 
         given().
                 auth().
@@ -52,17 +58,30 @@ public class GitHubAPI {
 
     @Test
     public void CreateIssueWithTokenAuthentication() {
-        // TODO: Implemet it.
+        Issue issue = new Issue();
+        issue.title = "Title2";
+        issue.body = "This is body.";
+
+        given().
+                auth().
+                preemptive().
+                oauth2(personalToken).
+                contentType("application/json; charset=UTF-8").
+                body(issue).
+        when().
+                post().
+        then().
+                statusCode(201);
     }
 
     @Test
-    public void CloseIssue() {
-        // TODO: Implemet it.
+    public void CloseAllOpenIssues() {
+        // TODO: Implement it.
     }
 
     @Test
     public void VerifyClosedIssuesAreMoreThanOpened() {
-        // TODO: Implemet it.
+        // TODO: Implement it.
         // URL sample: https://api.github.com/repos/dtopuzov/test/issues?state=open
     }
 }
