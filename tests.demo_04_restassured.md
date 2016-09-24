@@ -30,9 +30,16 @@ import static org.hamcrest.Matchers.*;
     
     Tests: tests.demo_04_restassured.ITeBooks
 
-2.1 GitHub API Demos
+
+2.2 Ergast Developer API 
+    
+    API: http://ergast.com/mrd/
+    Tests: tests.demo_04_restassured.F1
+
+2.3 GitHub API Demos
 
     Web: https://github.com
     API: https://api.github.com
-
+    Issues API: https://developer.github.com/v3/issues/
+    
     Tests: tests.demo_04_restassured.GitHubAPI

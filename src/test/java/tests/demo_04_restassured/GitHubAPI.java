@@ -7,8 +7,11 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import tests.demo_04_restassured.GitHubObjects.Issue;
 
+import java.util.List;
+
 import static io.restassured.RestAssured.basic;
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertTrue;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GitHubAPI {
@@ -50,9 +53,9 @@ public class GitHubAPI {
                 basic(user, password).
                 contentType("application/json; charset=UTF-8").
                 body(issue).
-        when().
+                when().
                 post().
-        then().
+                then().
                 statusCode(201);
     }
 
@@ -68,20 +71,68 @@ public class GitHubAPI {
                 oauth2(personalToken).
                 contentType("application/json; charset=UTF-8").
                 body(issue).
-        when().
+                when().
                 post().
-        then().
+                then().
                 statusCode(201);
     }
 
     @Test
     public void CloseAllOpenIssues() {
-        // TODO: Implement it.
+        // Get ids of all open issues
+        List<Integer> issueIds =
+                given().
+                        param("state", "open").
+                        when().
+                        get().
+                        then().
+                        statusCode(200).
+                        extract().
+                        response().path("number");
+
+        // Close all open issues
+        for (int id : issueIds) {
+            System.out.println("Closing issue #" + String.valueOf(id));
+
+            Issue issue = new Issue();
+            issue.state = "closed";
+
+            given().
+                    auth().
+                    preemptive(). // See https://github.com/rest-assured/rest-assured/issues/356#issuecomment-123187692
+                    basic(user, password).
+                    contentType("application/json; charset=UTF-8").
+                    //param("state", "closed").
+                            body(issue).
+                    when().
+                    patch("/" + String.valueOf(id)).
+                    then().
+                    statusCode(200);
+        }
     }
 
     @Test
     public void VerifyClosedIssuesAreMoreThanOpened() {
-        // TODO: Implement it.
-        // URL sample: https://api.github.com/repos/dtopuzov/test/issues?state=open
+        int openIssues =
+                given().
+                        param("state", "open").
+                        when().
+                        get().
+                        then().
+                        statusCode(200).
+                        extract().jsonPath().getList("$").size();
+
+        int closedIssues =
+                given().
+                        param("state", "closed").
+                        when().
+                        get().
+                        then().
+                        statusCode(200).
+                        extract().jsonPath().getList("$").size();
+
+        System.out.println("Open: " + String.valueOf(openIssues));
+        System.out.println("Closed: " + String.valueOf(closedIssues));
+        assertTrue("Open issues are more than closed.", openIssues < closedIssues);
     }
 }
