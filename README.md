@@ -1,4 +1,4 @@
-Demos with Junit, TestNG, Maven, Appium
+Demos with Junit, TestNG, REST Assured, Selenium, Sikuli and Appium
 
 [Junit Hello World Demo](tests.demo_01_junit.md)
 
@@ -8,6 +8,8 @@ Demos with Junit, TestNG, Maven, Appium
 
 [REST Assured](tests.demo_04_restassured.md)
 
-External resources:
+[Selenium](tests.demo_05_selenium.md)
 
-[Appium parallel execution](https://github.com/saikrishna321/AppiumTestDistribution)
+[Sikuli](tests.demo_05_sikuli.md)
+
+[Appium](tests.demo_07_appium.md)

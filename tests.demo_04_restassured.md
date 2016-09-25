@@ -9,7 +9,7 @@ Maven dependency:
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>3.0.1</version>
-        </dependency>ó
+        </dependency>
 ```
 
 Static imports:
