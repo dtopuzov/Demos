@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.pragmatic</groupId>
-    <artifactId>mobile</artifactId>
+    <groupId>org.dtopuzov</groupId>
+    <artifactId>demos</artifactId>
     <version>0.0.1</version>
 
     <dependencies>
@@ -34,6 +34,11 @@
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.0.0-beta3</version>
         </dependency>
     </dependencies>
 
