@@ -29,3 +29,6 @@ See hook demos in
 See test properties demos in
 - tests.demo_02_testng_hello_world.SmokeTests1
 - tests.demo_02_testng_hello_world.SmokeTests2
+
+Additional Resources:
+[PDF , Emails and Screenshot of Test Reports in Selenium](http://www.guru99.com/pdf-emails-and-screenshot-of-test-reports-in-selenium.html)

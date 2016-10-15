@@ -2,15 +2,18 @@ package tests.demo_05_selenium.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import tests.demo_05_selenium.BasePage;
 
 public class IssuesPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"js-issues-toolbar\"]/div[1]/div[1]/a[2]")
+    @CacheLookup
     private WebElement closedIssues;
 
     @FindBy(xpath = "//*[@id=\"js-issues-toolbar\"]/div[1]/div[1]/a[1]")
+    @CacheLookup
     private WebElement openIssues;
 
     public IssuesPage(WebDriver driver) {
