@@ -47,7 +47,7 @@ public class ITeBooks {
 
     @Test
     public void GetBookDetails() {
-        String expectedID = "583859216";
+        String expectedID = "947185260";
         String actualId =
                 when()
                     .get(baseURL + "book/{id}", expectedID)
