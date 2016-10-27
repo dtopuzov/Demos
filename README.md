@@ -13,3 +13,5 @@ Demos with Junit, TestNG, REST Assured, Selenium, Sikuli and Appium
 [Sikuli](tests.demo_05_sikuli.md)
 
 [Appium](tests.demo_07_appium.md)
+
+[Commandline execution with Maven](command_line_execution.md)

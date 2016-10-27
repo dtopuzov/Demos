@@ -1,13 +1,11 @@
 package tests.demo_05_selenium.Tests;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import tests.demo_05_selenium.API.Api;
 import tests.demo_05_selenium.BaseTest;
 import tests.demo_05_selenium.Pages.DefaultPage;
 import tests.demo_05_selenium.Pages.IssuesPage;
 
-import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

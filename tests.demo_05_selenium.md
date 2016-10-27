@@ -12,6 +12,8 @@ Maven dependency:
         </dependency>
 ```
 
+Note: This project does not have the reference above, because Appium brings Selenium.
+
 2. Usage, tools, tips, blogs:
 
 [Elemental Selenium](http://elementalselenium.com/tips)
@@ -32,6 +34,6 @@ Maven dependency:
 
 3. Demos
 
-3.1 GitHub
+3.1 GitHub Web Site Tests
 
     Tests: tests.demo_05_selenium.Tests
