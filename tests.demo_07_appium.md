@@ -27,7 +27,7 @@ Maven dependency:
 
 3. Examples:
 
-Important Node: before running tests, comment those lines in pom.xml
+Important Node: If you have Selenium and Appium in pom.xml, please remove Selenium dependency
 
         <!--<dependency>-->
             <!--<groupId>org.seleniumhq.selenium</groupId>-->
