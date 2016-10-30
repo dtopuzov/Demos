@@ -20,9 +20,14 @@ public class SelendroidAppTests {
     private static String emulatorPath = androidHome + File.separator + "tools" + File.separator + "emulator";
     private static String testAppPath = System.getProperty("user.dir") + File.separator + "testapps" + File.separator + "selendroid-test-app-0.11.0.apk";
 
-    public static String execCmd(String cmd) throws java.io.IOException {
+    private static String execCmd(String cmd) throws java.io.IOException {
         java.util.Scanner s = new java.util.Scanner(Runtime.getRuntime().exec(cmd).getInputStream()).useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";
+    }
+
+    private static void clickElement(String imagePath, int timeout) throws FindFailed {
+        s.wait(imagePath, timeout).mouseMove();
+        s.click();
     }
 
     @BeforeClass()
@@ -55,16 +60,17 @@ public class SelendroidAppTests {
 
     @Test()
     public void displayToast() throws FindFailed, InterruptedException {
-        s.wait("selendroid_app_display_toast_button.png", 30);
-        s.click("selendroid_app_display_toast_button.png", 30);
+        s.wait("selendroid_app_display_toast_button.png", 30).mouseMove();
+        s.click();
         s.wait("selendroid_app_display_toast.png", 30);
     }
 
     @Test()
     public void displayPopup() throws FindFailed, InterruptedException {
-        s.click("selendroid_app_display_popup_button.png", 30);
+        s.wait("selendroid_app_display_popup_button.png", 30).mouseMove();
+        s.click();
         s.wait("selendroid_app_display_popup.png", 30);
-        s.click("selendroid_app_display_popup.png", 30);
+        s.click();
     }
 
     @AfterClass(alwaysRun = true)
