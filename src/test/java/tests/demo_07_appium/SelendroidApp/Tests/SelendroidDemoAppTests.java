@@ -19,6 +19,7 @@ public class SelendroidDemoAppTests {
 
     private static String appiumPath = System.getenv("APPDATA") + "\\npm\\node_modules\\appium\\build\\lib\\main.js";
     private static File appiumExecutable = new File(appiumPath);
+
     @BeforeClass
     public static void beforeClass() throws Exception {
         AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder()
