@@ -15,7 +15,7 @@ public class CsvDataProvider {
     public static Object[][] createData() throws IOException {
 
         // Read CSV file
-        FileReader file = new FileReader("src/test/java/tests/demo_02_testng_data_driven/TestData.csv");
+        FileReader file = new FileReader("src/test/java/tests/demo_03_testng_data_driven/TestData.csv");
         CSVReader csvReader = new CSVReader(file);
         List<String[]> dataList = csvReader.readAll();
         csvReader.close();

@@ -22,7 +22,9 @@ public class NotepadTests {
         s.wait("navigation_bar.png"); // Wait notepad to load
         s.type("This is writen by Sikuli!"); // Type text
         s.type("s", KeyModifier.CTRL); // Send Ctrl+S to save file
-
+        s.wait("save_as.png");
+        s.type("sikuli.txt");
+        s.type(Key.ENTER);
     }
 
     @AfterClass()
