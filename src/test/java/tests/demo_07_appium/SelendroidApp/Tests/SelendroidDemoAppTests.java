@@ -9,16 +9,22 @@ import tests.demo_07_appium.SelendroidApp.Pages.HomePage;
 public class SelendroidDemoAppTests extends BaseTest {
 
     @Test
-    public void checkBox() throws InterruptedException {
+    public void checkBox() {
         HomePage seleniumDemo = new HomePage(Client.driver);
         seleniumDemo.checkBox.tap(1, 500);
-        Thread.sleep(1000);
-        boolean isCecked = Boolean.valueOf(seleniumDemo.checkBox.getAttribute("checked"));
-        Assert.assertEquals(isCecked, false, "Checkbox is still checked.");
-
+        boolean isChecked = Boolean.valueOf(seleniumDemo.checkBox.getAttribute("checked"));
+        Assert.assertEquals(isChecked, false, "Checkbox is still checked.");
         seleniumDemo.checkBox.tap(1, 500);
-        Thread.sleep(1000);
-        isCecked = Boolean.valueOf(seleniumDemo.checkBox.getAttribute("checked"));
-        Assert.assertEquals(isCecked, true, "Checkbox is unchecked.");
+        isChecked = Boolean.valueOf(seleniumDemo.checkBox.getAttribute("checked"));
+        Assert.assertEquals(isChecked, true, "Checkbox is unchecked.");
+    }
+
+    @Test
+    public void displayTextView() {
+        HomePage seleniumDemo = new HomePage(Client.driver);
+        seleniumDemo.displayTextViewButton.tap(1, 500);
+
+        // Alternatively ou can use
+        // seleniumDemo.findButton("Display text view").tap(1, 500);
     }
 }
