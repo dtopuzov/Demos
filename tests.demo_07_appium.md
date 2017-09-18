@@ -8,7 +8,7 @@
 1. Install
 
 ```
-    npm install -g appium@1.6.0
+    npm install -g appium
 ```
 
 Maven dependency: 
